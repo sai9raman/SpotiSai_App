@@ -26,12 +26,17 @@
 		<br>
 	</div>
 	{% if res %}
+		{% if 'Album' in res %}
 
-		Album: {{ res['Album'] }} <br>
-		Artist: {{ res['Artist'] }} <br>
-		Track: {{ res['Track'] }} <br>
-		Release Data: {{ res['Released'] }} <br>
-
+			Album: {{ res['Album'] }} <br>
+			Artist: {{ res['Artist'] }} <br>
+			Track: {{ res['Track'] }} <br>
+			Release Data: {{ res['Released'] }} <br>
+		
+		{% else %}
+			{{res}}
+		{% endif %}
+				
 	{% endif %}
 	<br>
 	<br>
