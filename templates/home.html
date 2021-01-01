@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Predict if Sai would like this song</title>
+
+<link type="text/css" rel="stylesheet" href="{{url_for('static',filename='./style.css') }}">
+</head>
+
+
+<body>
+	<div class="login">
+			<h1>Predict if Sai would like this song</h1>
+			
+			<br>
+		<!-- Form to enter details of the song -->
+		<form action="{{ url_for('search')}}"method="POST">
+			<input type="text" name="song_name" placeholder="Song Name" required="required" /><br>
+			<input type="text" name="album_name" placeholder="Album Name" required="required" /><br>
+			<br>
+			<button type="submit" class="btn btn-primary btn-block btn-large">Search</button>
+		</form>
+
+		<br>
+		<br>
+	</div>
+	{% if res %}
+
+		Album: {{ res['Album'] }} <br>
+		Artist: {{ res['Artist'] }} <br>
+		Track: {{ res['Track'] }} <br>
+		Release Data: {{ res['Released'] }} <br>
+
+	{% endif %}
+	<br>
+	<br>
+	<h4>
+	{{pred}}	
+	</h4>
+	
+</body>
+</html>	
