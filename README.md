@@ -1,4 +1,4 @@
-Spotisai 
+Spotisai (https://spotisai.herokuapp.com/)
 
 is a web app that predicts whether a song would be liked or not as per my taste preferences. 
 
