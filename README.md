@@ -26,5 +26,8 @@ To achieve this, a few machine learning models were trained with about 2500 song
 
     
 Some other features such as key, mode and time signature were not used in these as the features were noted to be largely incorrect for most songs that were spot checked. 
+
+For details on the training of the data please refer to the Explore_Spotify repository
+
 The final model chosen with an 81% accuracy was an XGBoost model. No further hypertuning was done to achieve better results. 
 
